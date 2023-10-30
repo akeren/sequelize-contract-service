@@ -1,0 +1,710 @@
+{
+	"info": {
+		"_postman_id": "5fa78f46-6dfc-4c64-aa57-28b825f952ba",
+		"name": "Deel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7972459",
+		"_collection_link": "https://codemaps.postman.co/workspace/Team-Workspace~0b5aba85-762d-4ae9-854b-ae32b6b616dc/collection/7972459-5fa78f46-6dfc-4c64-aa57-28b825f952ba?action=share&source=collection_link&creator=7972459"
+	},
+	"item": [
+		{
+			"name": "GET CONTRACT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API_URI}}/contracts/1",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"contracts",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET CONTRACT",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URI}}/contracts/1",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"contracts",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "228"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e4-dODlzk5ojSF+kQxkWfmHlERWvf8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 29 Oct 2023 13:00:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Contracts retrieved successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"terms\": \"bla bla bla\",\n        \"status\": \"terminated\",\n        \"createdAt\": \"2023-10-29T10:20:22.795Z\",\n        \"updatedAt\": \"2023-10-29T10:20:22.795Z\",\n        \"ContractorId\": 5,\n        \"ClientId\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ACTIVE CONTRACTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API_URI}}/contracts",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"contracts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ACTIVE CONTRACTS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "7",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URI}}/contracts",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"contracts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "555"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22b-DFSfldLDgHH7HbpZP0cOmra6UIA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 29 Oct 2023 13:15:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Contracts retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"terms\": \"bla bla bla\",\n            \"status\": \"in_progress\",\n            \"createdAt\": \"2023-10-29T10:20:22.795Z\",\n            \"updatedAt\": \"2023-10-29T10:20:22.795Z\",\n            \"ContractorId\": 7,\n            \"ClientId\": 2\n        },\n        {\n            \"id\": 6,\n            \"terms\": \"bla bla bla\",\n            \"status\": \"in_progress\",\n            \"createdAt\": \"2023-10-29T10:20:22.795Z\",\n            \"updatedAt\": \"2023-10-29T10:20:22.795Z\",\n            \"ContractorId\": 7,\n            \"ClientId\": 3\n        },\n        {\n            \"id\": 7,\n            \"terms\": \"bla bla bla\",\n            \"status\": \"in_progress\",\n            \"createdAt\": \"2023-10-29T10:20:22.795Z\",\n            \"updatedAt\": \"2023-10-29T10:20:22.795Z\",\n            \"ContractorId\": 7,\n            \"ClientId\": 4\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET UNPAID JOBS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API_URI}}/jobs/unpaid",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"jobs",
+						"unpaid"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET UNPAID JOBS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URI}}/jobs/unpaid",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"jobs",
+								"unpaid"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "765"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2fd-k8Jf76lJlVNPM91/8JtKYl2Ev9c\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 11:05:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Unpaid contract jobs retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"terms\": \"bla bla bla\",\n            \"status\": \"in_progress\",\n            \"createdAt\": \"2023-10-29T21:02:23.519Z\",\n            \"updatedAt\": \"2023-10-29T21:02:23.519Z\",\n            \"ContractorId\": 6,\n            \"ClientId\": 1,\n            \"Jobs\": [\n                {\n                    \"id\": 2,\n                    \"description\": \"work\",\n                    \"price\": 201,\n                    \"paid\": null,\n                    \"paymentDate\": null,\n                    \"createdAt\": \"2023-10-29T21:02:23.520Z\",\n                    \"updatedAt\": \"2023-10-29T21:02:23.520Z\",\n                    \"ContractId\": 2\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"terms\": \"bla bla bla\",\n            \"status\": \"in_progress\",\n            \"createdAt\": \"2023-10-29T21:02:23.519Z\",\n            \"updatedAt\": \"2023-10-29T21:02:23.519Z\",\n            \"ContractorId\": 6,\n            \"ClientId\": 2,\n            \"Jobs\": [\n                {\n                    \"id\": 3,\n                    \"description\": \"work\",\n                    \"price\": 202,\n                    \"paid\": null,\n                    \"paymentDate\": null,\n                    \"createdAt\": \"2023-10-29T21:02:23.520Z\",\n                    \"updatedAt\": \"2023-10-29T21:02:23.520Z\",\n                    \"ContractId\": 3\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "PAYMENT FOR JOB",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API_URI}}/jobs/:job_id/pay",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"jobs",
+						":job_id",
+						"pay"
+					],
+					"variable": [
+						{
+							"key": "job_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PAYMENT FOR JOB",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URI}}/jobs/:job_id/pay",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"jobs",
+								":job_id",
+								"pay"
+							],
+							"variable": [
+								{
+									"key": "job_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "436"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b4-H8RVef0cI72g+2hp0Yf8Qnv4PLo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 29 Oct 2023 21:04:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Payment successfully processed\",\n    \"data\": {\n        \"id\": 1,\n        \"description\": \"work\",\n        \"price\": 200,\n        \"paid\": true,\n        \"paymentDate\": \"2023-10-29T21:04:17.082Z\",\n        \"createdAt\": \"2023-10-29T21:02:23.520Z\",\n        \"updatedAt\": \"2023-10-29T21:04:17.083Z\",\n        \"ContractId\": 1,\n        \"Contract\": {\n            \"id\": 1,\n            \"terms\": \"bla bla bla\",\n            \"status\": \"terminated\",\n            \"createdAt\": \"2023-10-29T21:02:23.519Z\",\n            \"updatedAt\": \"2023-10-29T21:02:23.519Z\",\n            \"ContractorId\": 5,\n            \"ClientId\": 1\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "CLIENT DEPOSIT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"depositAmount\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URI}}/balances/deposit/:userId",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"balances",
+						"deposit",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CLIENT DEPOSIT",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"depositAmount\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URI}}/balances/deposit/:userId",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"balances",
+								"deposit",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"40-z9HZ4X3B5O1ypSFB7MXGqDPnqGo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 29 Oct 2023 23:12:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Deposit made successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "BEST PROFESSION",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URI}}/admin/best-profession?start=2020-01-01&end=2023-12-31",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"admin",
+						"best-profession"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "end",
+							"value": "2023-12-31"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "BEST PROFESSION",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}/admin/best-profession?start=2020-01-01&end=2023-12-31",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"admin",
+								"best-profession"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2020-01-01"
+								},
+								{
+									"key": "end",
+									"value": "2023-12-31"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"85-6HheK8LMR9KDM0JzvCKSQMWlVZ0\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 06:18:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Best profession retrieved successfully\",\n    \"data\": {\n        \"profession\": \"Programmer\",\n        \"totalEarnings\": 2020\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "BEST PAYING CLIENTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URI}}/admin/best-clients?start=2020-01-01&end=2023-12-31&limit=10/",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"admin",
+						"best-clients"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "end",
+							"value": "2023-12-31"
+						},
+						{
+							"key": "limit",
+							"value": "10/"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "BEST PROFESSION",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}/admin/best-profession?start=2020-01-01&end=2023-12-31",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"admin",
+								"best-profession"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2020-01-01"
+								},
+								{
+									"key": "end",
+									"value": "2023-12-31"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"85-6HheK8LMR9KDM0JzvCKSQMWlVZ0\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 06:18:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Best profession retrieved successfully\",\n    \"data\": {\n        \"profession\": \"Programmer\",\n        \"totalEarnings\": 2020\n    }\n}"
+				},
+				{
+					"name": "BEST PAYING CLIENTS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}/admin/best-clients?start=2020-01-01&end=2023-12-31&limit=10",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"admin",
+								"best-clients"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2020-01-01"
+								},
+								{
+									"key": "end",
+									"value": "2023-12-31"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "241"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f1-VNsjRxxtqg/Ii/fGAbKLa1O4Dq0\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 10:37:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Clients payments\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"fullName\": \"Ash Kethcum\",\n            \"paid\": 2020\n        },\n        {\n            \"id\": 1,\n            \"fullName\": \"Harry Potter\",\n            \"paid\": 642\n        },\n        {\n            \"id\": 2,\n            \"fullName\": \"Mr Robot\",\n            \"paid\": 442\n        },\n        {\n            \"id\": 3,\n            \"fullName\": \"John Snow\",\n            \"paid\": 200\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
